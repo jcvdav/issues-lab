@@ -20,19 +20,19 @@ summary(storms)
 
 Look at the variable names:
 ```{r}
-Names(storms)
+names(storms)
 ```
 
 ## Step 2: Exploratory visualization
 
 ```{r}
-ggplot(data = storms, aes(x = category, y = pressure)) +
-  geom_jitter(width = 0.1,
-              alpha = 0.5,
-              color = "red",
-              show.legend = FALSE) +
-  labs(x = "Storm Category",
-       y = "Air pressure at storm center (millibars)"
-       ) +
-  theme_void()
+ ggplot(data = storms, aes(x = category, y = pressure)) + 
+   geom_jitter(width = 0.1,  
+               alpha = 0.5, 
+               aes(color = category), 
+               show.legend = FALSE) + 
+   labs(x = "StorM CategorRY",  
+        y = "Air pressure at storm center (millibars)" 
+        ) + 
+   theme_void() 
 ```
